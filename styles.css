@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #081c2c, #0f6c8d);
+    color: white;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.card {
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.2);
+    animation: fadeIn 1.5s ease;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.top-text {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.image-box img {
+    width: 180px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.happy {
+    background: black;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.date {
+    color: #ccc;
+    margin: 8px 0;
+}
+
+.message {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.countdown {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #00ffc3;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #00ffc3;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
